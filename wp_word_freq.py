@@ -143,7 +143,7 @@ ignore_list could be handled multiple ways, it wasn't clear for me which was wan
 Currently, the words in the ignore list are deleted and only after that is percentile calculated, on the remaining words and counts.
 Another way of handling could be that percentages are calculated first and ignore_list only comes into play afterwards.
 It comes down to the quesion of 'do we want to ignore part of the input or part of the output'. The current implementation does the former.
-To implement the latter, we need to swap lines 108-110 and 112-115.
+To implement the latter, we need to swap lines 112-114 and 116-119.
 
 One last note about ignore_list: while in the task it was mentioned as "ignore_list (array[string]): A list of words to ignore.", I took the initiative to make it a set.
 I believe a set type is more clear in this usecase as there is no reason for a word appearing multiple times in ignore_list,
