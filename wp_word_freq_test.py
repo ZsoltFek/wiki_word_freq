@@ -52,7 +52,7 @@ class TestWikipediaAPI(unittest.TestCase):
 
     def test_get_word_frequencies_route(self):
         with wp_word_freq.app.test_client() as client:
-            response = client.get('/get_word_frequencies?title=Python&depth=0')
+            response = client.get('/word_frequency?title=Python&depth=0')
             self.assertEqual(response.status_code, 200)
             data = response.get_json()
             self.assertIsInstance(data, dict)
